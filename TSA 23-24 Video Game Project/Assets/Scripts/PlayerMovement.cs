@@ -5,17 +5,22 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
-    public float speed = 0f;
+    public float speed = 4f;
     public float jumpHeight = 16f;
     private bool isFacingRight = true;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
     {
+        //Animation
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+
+        //Horizontal Movement
         horizontal = Input.GetAxisRaw("Horizontal");
         if(Input.GetButtonDown("Jump") && isGrounded())
         {
@@ -25,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight*0.5f);
         }
+        Flip();
 
     }
 
