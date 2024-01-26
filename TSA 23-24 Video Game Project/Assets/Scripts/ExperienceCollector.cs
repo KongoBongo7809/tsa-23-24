@@ -15,7 +15,7 @@ public class ExperienceCollector : MonoBehaviour
         {
             Destroy(collision.gameObject);
             experience++;
-            experienceText.text = "EXP: " + experience;
+            experienceText.text = "" + experience;
         }
     }
 }

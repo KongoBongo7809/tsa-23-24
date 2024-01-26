@@ -361,6 +361,7 @@
 "Assets/Scripts/EnemyCombat.cs"
 "Assets/Scripts/EnemyGraphics.cs"
 "Assets/Scripts/ExperienceCollector.cs"
+"Assets/Scripts/HealthBar.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/PlayerCombat.cs"
 "Assets/Scripts/PlayerMovement.cs"

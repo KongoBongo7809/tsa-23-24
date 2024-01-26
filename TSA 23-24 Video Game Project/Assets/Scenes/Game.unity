@@ -4327,11 +4327,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1836072961 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2579509439838982215, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
-  m_PrefabInstance: {fileID: 7123373382442580610}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1850488313
 GameObject:
   m_ObjectHideFlags: 0
@@ -4521,10 +4516,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
-    - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1836072961}
     - target: {fileID: 7229236866648328002, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -4569,10 +4560,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8496278710821904102, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0578ea46957514ca3a59d49b7095896a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

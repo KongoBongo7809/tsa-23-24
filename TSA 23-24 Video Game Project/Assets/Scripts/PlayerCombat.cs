@@ -6,14 +6,27 @@ public class PlayerCombat : MonoBehaviour
 {
     public Animator animator;
 
+    [Header("Attack")]
     public Transform attackPoint;
     public LayerMask enemyLayers;
-
+    
     public int attackDamage = 40;
     public float attackRange = 0.5f;
 
     public float attackRate = 2f;
     float nextAttackTime;
+
+    [Header("Health")]
+    public int maxHealth = 100;
+    int currentHealth;
+
+    public HealthBar healthBar;
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,7 +39,13 @@ public class PlayerCombat : MonoBehaviour
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
-        
+
+        //Temporary attack
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            TakeDamage(-20);
+        }
+
     }
 
     void Attack()
@@ -44,6 +63,18 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+        animator.SetTrigger("Hurt");
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+
     private void OnDrawGizmosSelected()
     {
         if(attackPoint == null)
@@ -51,5 +82,11 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    void Die()
+    {
+        animator.SetBool("isDead", true);
+        Debug.Log("Player Died");
     }
 }
