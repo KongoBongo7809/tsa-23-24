@@ -228,13 +228,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
+    - target: {fileID: 1136732764766599676, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: activateDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 821168853}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: playerExperience
+      value: 
+      objectReference: {fileID: 821168856}
+    - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7229236866648328002, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: m_Name
@@ -306,13 +314,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
+    - target: {fileID: 1136732764766599676, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: activateDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 821168853}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: playerExperience
+      value: 
+      objectReference: {fileID: 821168856}
+    - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7229236866648328002, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: m_Name
@@ -617,13 +633,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
+    - target: {fileID: 1136732764766599676, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: activateDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 821168853}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: playerExperience
+      value: 
+      objectReference: {fileID: 821168856}
+    - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7229236866648328002, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: m_Name
@@ -21419,13 +21443,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
+    - target: {fileID: 1136732764766599676, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: activateDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 821168853}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: playerExperience
+      value: 
+      objectReference: {fileID: 821168856}
+    - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7229236866648328002, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: m_Name
@@ -21634,13 +21666,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
+    - target: {fileID: 1136732764766599676, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: activateDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 821168853}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: playerExperience
+      value: 
+      objectReference: {fileID: 821168856}
+    - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7229236866648328002, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: m_Name
@@ -22358,13 +22398,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
+    - target: {fileID: 1136732764766599676, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: activateDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 821168853}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: playerExperience
+      value: 
+      objectReference: {fileID: 821168856}
+    - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7229236866648328002, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: m_Name
@@ -23084,13 +23132,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
+    - target: {fileID: 1136732764766599676, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: activateDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 821168853}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: playerExperience
+      value: 
+      objectReference: {fileID: 821168856}
+    - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7229236866648328002, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: m_Name
@@ -27950,13 +28006,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
+    - target: {fileID: 1136732764766599676, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: activateDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 821168853}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: playerExperience
+      value: 
+      objectReference: {fileID: 821168856}
+    - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7229236866648328002, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: m_Name
@@ -28350,6 +28414,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 821168853}
+    - target: {fileID: 1136732764766599676, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
+      propertyPath: activateDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3321153331638257276, guid: fe5e13464d0244a32b630339069fd5de, type: 3}
       propertyPath: player
       value: 
