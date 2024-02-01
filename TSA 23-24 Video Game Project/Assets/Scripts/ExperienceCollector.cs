@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class ExperienceCollector : MonoBehaviour
 {
-    private int experience = 0;
+    public int experience = 0;
 
-    [SerializeField] private Text experienceText;
+    [SerializeField] public Text experienceText;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

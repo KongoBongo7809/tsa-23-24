@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyCombat : MonoBehaviour
 {
     public Animator animator;
+    public ExperienceCollector playerExperience;
 
     public int maxHealth = 100;
     int currentHealth;
@@ -18,6 +19,8 @@ public class EnemyCombat : MonoBehaviour
 
     public float attackRate = 1f;
     float nextAttackTime;
+
+    public int onDeathExperience = 5;
 
     void Start()
     {
@@ -75,5 +78,7 @@ public class EnemyCombat : MonoBehaviour
         animator.SetBool("isDead", true);
 
         Destroy(this.gameObject);
+        playerExperience.experience += onDeathExperience;
+        playerExperience.experienceText.text = "" + playerExperience.experience;
     }
 }

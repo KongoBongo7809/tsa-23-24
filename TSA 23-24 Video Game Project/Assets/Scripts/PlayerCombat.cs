@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class PlayerCombat : MonoBehaviour
     int currentHealth;
 
     public HealthBar healthBar;
+
+    [Header("Death")]
+    public Rigidbody2D rb;
 
     private void Start()
     {
@@ -88,5 +92,12 @@ public class PlayerCombat : MonoBehaviour
     {
         animator.SetBool("isDead", true);
         Debug.Log("Player Died");
+
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     public float jumpHeightNodeRequirement = 0.8f;
     public float jumpHeight = 0.3f;
     public float jumpCheckOffset = 0.1f;
+    public float activateDistance = 3f;
 
     Path path;
     int currentWaypoint = 0;
@@ -38,7 +39,7 @@ public class EnemyAI : MonoBehaviour
 
     void UpdatePath()
     {
-        if (seeker.IsDone())
+        if (seeker.IsDone() && TargetInDistance())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
@@ -107,5 +108,14 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, activateDistance);
+    }
+
+    bool TargetInDistance()
+    {
+        return Vector2.Distance(transform.position, target.transform.position) < activateDistance;
+    }
 }
