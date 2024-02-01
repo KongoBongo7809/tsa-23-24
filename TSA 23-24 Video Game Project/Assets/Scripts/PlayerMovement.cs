@@ -26,10 +26,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        /*if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight*0.5f);
-        }
+        }*/
         Flip();
 
     }
