@@ -54,8 +54,9 @@ public class PlayerCombat : MonoBehaviour
 
     void Attack()
     {
-        //Play an attack animation
+        //Play an attack animation and attack audio
         animator.SetTrigger("Attack");
+        FindObjectOfType<AudioManager>().Play("Sword Clash");
 
         //Detect enemies in range of an attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -88,7 +89,7 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    void Die()
+    public void Die()
     {
         animator.SetBool("isDead", true);
         Debug.Log("Player Died");

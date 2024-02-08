@@ -14,6 +14,7 @@ public class ExperienceCollector : MonoBehaviour
         if (collision.gameObject.CompareTag("Experience"))
         {
             Destroy(collision.gameObject);
+            FindObjectOfType<AudioManager>().PlayOneShot("Experience");
             experience++;
             experienceText.text = "" + experience;
         }

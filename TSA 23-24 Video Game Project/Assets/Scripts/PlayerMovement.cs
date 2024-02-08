@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     public Animator animator;
 
+    bool isGroundedLastFrame = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +34,20 @@ public class PlayerMovement : MonoBehaviour
         }*/
         Flip();
 
+        //Audio
+        //Footsteps
+        bool isMoving = (horizontal != 0) ? true : false;
+        AudioManager audioManager = FindObjectOfType<AudioManager>();
+
+        if (isMoving && !audioManager.isPlaying("Footsteps") && isGrounded()) audioManager.Play("Footsteps");
+        if (!isMoving || !isGrounded()) audioManager.Stop("Footsteps");
+
+        if(isGrounded() && !isGroundedLastFrame)
+        {
+            audioManager.Play("Jump Land");
+        }
+        isGroundedLastFrame = isGrounded();
+        
     }
 
     private void FixedUpdate()

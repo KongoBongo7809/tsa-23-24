@@ -189,6 +189,7 @@ MonoBehaviour:
   jumpHeightNodeRequirement: 0.8
   jumpHeight: 3.5
   jumpCheckOffset: 0.1
+  activateDistance: 3
   groundCheck: {fileID: 8733073428061659000}
   groundLayer:
     serializedVersion: 2
@@ -207,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3638283844851273617}
+  playerExperience: {fileID: 0}
   maxHealth: 100
   attackPoint: {fileID: 2977481799993041325}
   playerLayer:
@@ -215,6 +217,7 @@ MonoBehaviour:
   attackDamage: 10
   attackRange: 0.5
   attackRate: 0.5
+  onDeathExperience: 5
 --- !u!1 &8339322738656380212
 GameObject:
   m_ObjectHideFlags: 0
