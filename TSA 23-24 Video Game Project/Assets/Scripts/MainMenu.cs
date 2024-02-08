@@ -7,7 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        FindObjectOfType<SceneManagement>().LoadCutscene();
         FindObjectOfType<SceneManagement>().LoadNextLevel();
     }
 }

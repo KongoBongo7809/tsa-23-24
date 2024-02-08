@@ -46,6 +46,7 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
         cutsceneManager.TriggerAnimation();
+        FindObjectOfType<AudioManager>().Play("Text");
     }
 
     IEnumerator TypeSentence(string sentence)

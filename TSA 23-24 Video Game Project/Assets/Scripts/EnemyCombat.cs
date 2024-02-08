@@ -21,6 +21,7 @@ public class EnemyCombat : MonoBehaviour
     float nextAttackTime;
 
     public int onDeathExperience = 5;
+    bool playerInRangeLastFrame = false;
 
     void Start()
     {
@@ -37,6 +38,14 @@ public class EnemyCombat : MonoBehaviour
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
+
+        //Player in range audio
+        AudioManager audioManager = FindObjectOfType<AudioManager>();
+        if (playerInRange() && !playerInRangeLastFrame)
+        {
+            audioManager.Play("Enemy Growl");
+        }
+        playerInRangeLastFrame = playerInRange();
     }
 
     bool playerInRange()
@@ -50,8 +59,9 @@ public class EnemyCombat : MonoBehaviour
 
         //Play hurt animation
         animator.SetTrigger("Hurt");
+        FindObjectOfType<AudioManager>().Play("Enemy Hurt");
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }

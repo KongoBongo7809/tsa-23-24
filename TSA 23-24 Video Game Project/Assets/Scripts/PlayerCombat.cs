@@ -73,6 +73,7 @@ public class PlayerCombat : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
         animator.SetTrigger("Hurt");
+        FindObjectOfType<AudioManager>().Play("Player Hurt");
         if (currentHealth <= 0)
         {
             Die();
