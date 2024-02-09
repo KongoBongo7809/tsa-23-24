@@ -15,6 +15,8 @@ public class EnemyAI : MonoBehaviour
     public float jumpCheckOffset = 0.1f;
     public float activateDistance = 3f;
 
+    public bool canJump = true;
+
     Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
@@ -67,7 +69,7 @@ public class EnemyAI : MonoBehaviour
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
-        if(isGrounded)
+        if (isGrounded && canJump) 
         {
             //rb.AddForce(Vector2.up * speed * jumpHeight);
             if (direction.y > jumpHeightNodeRequirement)

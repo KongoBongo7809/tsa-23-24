@@ -19,7 +19,8 @@ public class PlayerCombat : MonoBehaviour
 
     [Header("Health")]
     public int maxHealth = 100;
-    int currentHealth;
+    public float healthPs = 5f;
+    float currentHealth;
 
     public HealthBar healthBar;
 
@@ -45,10 +46,22 @@ public class PlayerCombat : MonoBehaviour
         }
 
         //Temporary attack
-        if (Input.GetKeyDown(KeyCode.Q))
+        /*if (Input.GetKeyDown(KeyCode.Q))
         {
             TakeDamage(-20);
+        }*/
+
+        currentHealth += healthPs * Time.deltaTime;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
         }
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+
+        healthBar.SetHealth((int)currentHealth);
 
     }
 
@@ -62,19 +75,26 @@ public class PlayerCombat : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         //Damage enemies
+        
         foreach(Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<EnemyCombat>().TakeDamage(attackDamage);
+            if (enemy.GetComponent<EnemyCombat>() != null)
+            {
+                enemy.GetComponent<EnemyCombat>().TakeDamage(attackDamage);
+            } else
+            {
+                enemy.GetComponent<BossCombat>().TakeDamage(attackDamage);
+            }
         }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        healthBar.SetHealth((int)currentHealth);
         animator.SetTrigger("Hurt");
         FindObjectOfType<AudioManager>().Play("Player Hurt");
-        if (currentHealth <= 0)
+        if ((int)currentHealth <= 0)
         {
             Die();
         }

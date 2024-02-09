@@ -10,7 +10,7 @@ public class ObjectCollision : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Death Barrier"))
         {
-            player.GetComponent<PlayerCombat>().TakeDamage(100);
+            player.GetComponent<PlayerCombat>().TakeDamage(200);
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Chest"))
@@ -18,6 +18,18 @@ public class ObjectCollision : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Chest");
             FindObjectOfType<SceneManagement>().LoadCutscene();
             FindObjectOfType<SceneManagement>().LoadNextLevel();
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Rock"))
+        {
+            FindObjectOfType<AudioManager>().Play("Rock Hit");
+            player.GetComponent<PlayerCombat>().TakeDamage(25);
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Spikes"))
+        {
+            FindObjectOfType<AudioManager>().Play("Chest");
+            player.GetComponent<PlayerCombat>().TakeDamage(15);
         }
     }
 }

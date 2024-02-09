@@ -8,7 +8,7 @@ public class EnemyCombat : MonoBehaviour
     public ExperienceCollector playerExperience;
 
     public int maxHealth = 100;
-    int currentHealth;
+    public int currentHealth;
 
     //Attack stats
     public Transform attackPoint;
@@ -90,5 +90,10 @@ public class EnemyCombat : MonoBehaviour
         Destroy(this.gameObject);
         playerExperience.experience += onDeathExperience;
         playerExperience.experienceText.text = "" + playerExperience.experience;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
