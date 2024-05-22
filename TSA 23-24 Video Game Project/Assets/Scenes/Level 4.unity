@@ -2447,7 +2447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 821168853}
   graphics: {fileID: 796556263}
-  speed: 500
+  speed: 250
   nextWaypointDistance: 3
   jumpHeightNodeRequirement: 0.8
   jumpHeight: 0.3
@@ -2585,7 +2585,7 @@ MonoBehaviour:
     m_Bits: 256
   attackDamage: 40
   attackRange: 6
-  attackRate: 0.2
+  attackRate: 0.25
   onDeathExperience: 50
 --- !u!1 &1356384435
 GameObject:

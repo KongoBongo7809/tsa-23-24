@@ -37,33 +37,35 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= nextAttackTime)
+        if (!animator.GetBool("isDead"))
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Time.time >= nextAttackTime)
             {
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Attack();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
             }
+
+            //Temporary attack
+            /*if (Input.GetKeyDown(KeyCode.Q))
+            {
+                TakeDamage(-20);
+            }*/
+
+            currentHealth += healthPs * Time.deltaTime;
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+            if (currentHealth < 0)
+            {
+                currentHealth = 0;
+            }
+
+            healthBar.SetHealth((int)currentHealth);
         }
-
-        //Temporary attack
-        /*if (Input.GetKeyDown(KeyCode.Q))
-        {
-            TakeDamage(-20);
-        }*/
-
-        currentHealth += healthPs * Time.deltaTime;
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
-        if (currentHealth < 0)
-        {
-            currentHealth = 0;
-        }
-
-        healthBar.SetHealth((int)currentHealth);
-
     }
 
     void Attack()
