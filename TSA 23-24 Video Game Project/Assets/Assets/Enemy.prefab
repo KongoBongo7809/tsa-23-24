@@ -155,7 +155,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -190,6 +190,7 @@ MonoBehaviour:
   jumpHeight: 3.5
   jumpCheckOffset: 0.1
   activateDistance: 3
+  canJump: 1
   groundCheck: {fileID: 8733073428061659000}
   groundLayer:
     serializedVersion: 2
@@ -210,13 +211,14 @@ MonoBehaviour:
   animator: {fileID: 3638283844851273617}
   playerExperience: {fileID: 0}
   maxHealth: 100
+  currentHealth: 0
   attackPoint: {fileID: 2977481799993041325}
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  attackDamage: 10
+  attackDamage: 20
   attackRange: 0.5
-  attackRate: 0.5
+  attackRate: 1
   onDeathExperience: 5
 --- !u!1 &8339322738656380212
 GameObject:

@@ -25,7 +25,7 @@ public class BossStages : MonoBehaviour {
         {
             int rand = UnityEngine.Random.Range(0, rockSpawnPoints.Length);
             Transform rockInstanceSpawn = rockSpawnPoints[rand];
-            var rockInstance = Instantiate(rock, rockSpawnPoints[rand].position, Quaternion.identity);
+            GameObject rockInstance = Instantiate(rock, rockSpawnPoints[rand].position, Quaternion.identity);
             rockInstance.GetComponent<Rigidbody2D>().velocity = rockInstanceSpawn.up * rockSpeed;
         }
     }

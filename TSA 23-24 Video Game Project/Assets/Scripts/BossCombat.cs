@@ -77,7 +77,10 @@ public class BossCombat : MonoBehaviour
         //Damage player
         foreach (Collider2D player in hitPlayer)
         {
-            player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+            if (!player.GetComponent<PlayerCombat>().animator.GetBool("isDead"))
+            {
+                player.GetComponent<PlayerCombat>().TakeDamage(attackDamage);
+            }
         }
     }
 

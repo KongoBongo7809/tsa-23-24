@@ -381,6 +381,7 @@
 "Assets/Scripts/ObjectCollision.cs"
 "Assets/Scripts/PlayerCombat.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/RockCollision.cs"
 "Assets/Scripts/SceneManagement.cs"
 "Assets/Scripts/Volume.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"

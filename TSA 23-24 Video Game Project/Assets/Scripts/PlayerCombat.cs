@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
+    public BoxCollider2D hitbox;
     public Animator animator;
 
     [Header("Attack")]
@@ -19,7 +20,7 @@ public class PlayerCombat : MonoBehaviour
 
     [Header("Health")]
     public int maxHealth = 100;
-    public float healthPs = 5f;
+    public float healthPs = 2.5f;
     float currentHealth;
 
     public HealthBar healthBar;
@@ -36,7 +37,7 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= nextAttackTime)
+        if (Time.time >= nextAttackTime)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -76,7 +77,7 @@ public class PlayerCombat : MonoBehaviour
 
         //Damage enemies
         
-        foreach(Collider2D enemy in hitEnemies)
+        foreach (Collider2D enemy in hitEnemies)
         {
             if (enemy.GetComponent<EnemyCombat>() != null)
             {
@@ -100,10 +101,21 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth((int)currentHealth);
+        animator.SetTrigger("Hurt");
+        FindObjectOfType<AudioManager>().Play("Player Hurt");
+        if ((int)currentHealth <= 0)
+        {
+            Die();
+        }
+    }
 
     private void OnDrawGizmosSelected()
     {
-        if(attackPoint == null)
+        if (attackPoint == null)
         {
             return;
         }

@@ -67,14 +67,14 @@ public class EnemyAI : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
         
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
+        Vector2 force = direction * speed * Time.deltaTime * rb.mass;
 
         if (isGrounded && canJump) 
         {
             //rb.AddForce(Vector2.up * speed * jumpHeight);
             if (direction.y > jumpHeightNodeRequirement)
             {
-                rb.AddForce(Vector2.up * speed * jumpHeight);
+                rb.AddForce(Vector2.up * speed * jumpHeight * rb.mass);
             }
             //rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }

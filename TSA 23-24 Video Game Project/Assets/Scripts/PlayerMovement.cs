@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     bool isGroundedLastFrame = false;
 
+    void Start()
+    {
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Spikes"));
+    }
+
     // Update is called once per frame
     void Update()
     {
